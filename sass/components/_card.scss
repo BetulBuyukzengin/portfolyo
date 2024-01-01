@@ -1,0 +1,43 @@
+.projects {
+  &-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-card {
+    display: flex;
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin-bottom: 10%;
+
+      @include respond(tab-port) {
+        margin-bottom: 15%;
+      }
+      @include respond(phone) {
+        margin-bottom: 25%;
+      }
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__img {
+      width: 50%;
+      @include respond(big-desktop) {
+        width: 65rem;
+      }
+      @include respond(phone){
+        width: 85%;
+      }
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint==mini-phone {
+    @media only screen and (max-width: 25em) {
+      @content;
+    } //400 px
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600 px
+  }
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content; //900 px
+    }
+  }
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200 px
+  }
+  // Max 1800 px
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 112em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800 px
+  }
+}
+
+@mixin headingBig {
+  font-size: 5.5rem;
+}
+@mixin headingSmall {
+  font-size: 2.5rem;
+}
+@mixin headingMid {
+  font-size: 2.8rem;
+}
+@mixin paragraphyBig {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  line-height: 3.6rem;
+}
+@mixin paragraphySmall {
+  font-size: 1.5rem;
+}
+@mixin paragraphyMid {
+  font-size: 2.5rem;
+}
+@mixin projectHead {
+  font-size: 4rem;
+}
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+@mixin show {
+  opacity: 1;
+  visibility: visible;
+}

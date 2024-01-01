@@ -1,0 +1,220 @@
+.navbar {
+  padding: 1%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $color-blue-dark;
+  transition: all 0.3s;
+
+  @include respond(big-desktop) {
+    padding: 3% 0 2% 2%;
+  }
+  @include respond(tab-land) {
+    background-color: $color-dark;
+  }
+}
+.nav-profile {
+  width: 6%;
+  transition: opacity 0.5s 0.2s cubic-bezier(0.53, 0.53, 0.71, 0.21);
+
+  @include respond(big-desktop) {
+    width: 10rem;
+    margin-left: 1rem;
+    padding: 0;
+    position: fixed;
+    top: 3rem;
+    left: 1.5rem;
+    z-index: 101;
+  }
+  @include respond(laptop) {
+    width: 8rem;
+    margin-left: 1rem;
+    padding: 0;
+    position: fixed;
+    top: 1rem;
+    left: 0.5rem;
+    z-index: 101;
+  }
+
+  @include respond(tab-port) {
+    width: 10%;
+    padding: 2rem 0 0 1rem;
+  }
+  @include respond(phone) {
+    width: 7rem;
+    margin-left: 1rem;
+    padding: 0;
+    position: fixed;
+    top: 1rem;
+    left: 0.5rem;
+    z-index: 101;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 85%;
+  list-style: none;
+  transition: opacity 0.4s 0.2s cubic-bezier(0.25, 0.73, 0.71, 0.21), height 0s;
+
+  @include respond(big-desktop) {
+    width: 100%;
+  }
+  @include respond(laptop) {
+    width: 100%;
+  }
+
+  @include respond(tab-port) {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    width: 98%;
+    position: absolute;
+  }
+  @include respond(phone) {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    flex-direction: column;
+    height: 100dvh;
+    align-items: center;
+    width: 98%;
+    position: absolute;
+  }
+ 
+  &-link {
+    text-decoration: none;
+    // font-size: 30px;
+    font-size: 3rem;
+    color: $color-white;
+    cursor: pointer;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    transition: all 0.3s 0.5s;
+
+    @include respond(big-desktop) {
+      font-size: 4rem;
+    }
+  }
+  &-li {
+    transition: all 0.5s;
+  }
+}
+
+.navigation {
+  &__checkbox {
+    display: none;
+    @include hidden;
+  }
+  @include respond(tab-port) {
+    @include show;
+  }
+
+  &__button {
+    background-color: $color-white;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(black, 0.1);
+    text-align: center;
+    cursor: pointer;
+    @include hidden;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+      @include show;
+    }
+    @include respond(phone) {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient($color-blue-dark, $color-black-dark);
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    @include hidden;
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+      @include show;
+    }
+    @include respond(phone) {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+  //FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+  &__checkbox:checked ~ .header {
+    opacity: 1;
+  }
+  //ICON
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: gray;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

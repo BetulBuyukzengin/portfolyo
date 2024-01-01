@@ -1,0 +1,79 @@
+.projects {
+  &-card__btn {
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    font-size: 1.2rem;
+    background-color: $color-orange;
+    color: $color-white;
+    text-transform: uppercase;
+    padding: 3% 7%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bolder;
+    margin-top: 1%;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s;
+
+    @include respond(big-desktop) {
+      padding: 4% 10%;
+      width: 14%;
+      font-size: 2.2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      padding: 3%;
+    }
+    @include respond(phone) {
+      padding: 1rem 2.5rem;
+      width: auto;
+    }
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem $color-light;
+      &::after {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem $color-light;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 3px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+      background-color: $color-orange;
+    }
+  }
+  &-card__btn:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+.project_buttons {
+  @include respond(big-desktop) {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  @include respond(laptop) {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

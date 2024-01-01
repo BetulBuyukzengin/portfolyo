@@ -1,0 +1,111 @@
+.home {
+  height: 45rem;
+  text-align: center;
+  background-image: url(/img/home.png);
+  padding: 5% 0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // scroll-margin-top: calc(45rem - 8rem);
+
+  @include respond(phone) {
+    background-repeat: no-repeat;
+    height: 50rem;
+    padding: 0;
+    background-position: center;
+    background-size: auto;
+    // scroll-margin-top: 0.01rem;
+  }
+  &-headings {
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 0;
+  }
+}
+
+// .home-headings {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.about {
+  height: 30rem;
+  display: flex;
+  padding: 7%;
+  scroll-margin-top: calc(30rem - 10rem);
+
+  @include respond(tab-port) {
+    // height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    height:auto;
+    margin-bottom: 20rem;
+  }
+
+  @include respond(mini-phone) {
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  &-skills {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      width: 100%;
+      margin-bottom: 5rem;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+// .about-skills {
+//   width: 40%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+.projects {
+  display: flex;
+  flex-direction: column;
+  padding: 7%;
+  scroll-margin-top: calc(20rem - 10rem);
+}
+.column {
+  margin-top: 5%;
+  padding: 0 5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(big-desktop) {
+    margin: 0;
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+.lazy-img {
+  filter: blur(2rem);
+  // filter: blur(20px);
+}
+.section {
+  transition: transform 0.5s, opacity 1s;
+}

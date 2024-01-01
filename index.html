@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- <i class="fa-solid fa-bars hamburgerMenu"></i> -->
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span></label
+      >
+      <div class="navigation__background">&nbsp;</div>
+
+      <ul class="header">
+        <li class="header-li">
+          <a href="#home" class="header-link">Home</a>
+        </li>
+        <li class="header-li">
+          <a href="#about" class="header-link">About</a>
+        </li>
+        <li class="header-li">
+          <a href="#projects" class="header-link">Projects</a>
+        </li>
+        <li class="header-li">
+          <a href="#contact" class="header-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <img class="nav-profile" src="img/profile.png" alt="profile" />
+
+    <div class="home section" id="home">
+      <h1 class="home-headings">
+        <span class="home-headings__job">Frontend Developer</span>
+        <span class="home-headings__name">Betül Büyükzengin</span>
+      </h1>
+    </div>
+    <div class="about section" id="about">
+      <div class="about-skills">
+        <h2 class="about-skills__headings">SKILLS & TECHS</h2>
+        <ul class="about-skills__list">
+          <li class="about-skill">HTML5</li>
+          <li class="about-skill">CSS3</li>
+          <li class="about-skill">SASS</li>
+          <li class="about-skill">JAVASCRIPT</li>
+          <li class="about-skill">NPM</li>
+          <li class="about-skill">OOP</li>
+        </ul>
+      </div>
+      <div class="about-text">
+        <h2 class="about-text__heading">ABOUT</h2>
+        <p class="about-text__paragraphy">
+          Hello, I am Betül. I am a graduate of Kütahya Dumlupınar University
+          Computer Engineering.<br />I develop projects with the knowledge and
+          experience I have gained so far. I want to continue my career in the
+          field of Frontend Developer and become an expert in this field.
+        </p>
+      </div>
+    </div>
+    <div class="projects" id="projects">
+      <h2 class="projects__heading section">PROJECTS</h2>
+      <div class="projects-cards">
+        <div class="projects-card section">
+          <img
+            class="projects-card__img lazy-img"
+            src="img/natours-lazy.png"
+            data-src="img/natours.png"
+            alt="natours"
+          />
+          <div class="column">
+            <h2 class="projects-card__name">NATOURS</h2>
+            <p class="projects__description">
+              Discover this travel website featuring animations and hover
+              effects, organizing tours to various destinations, and being
+              responsive across different devices.
+            </p>
+            <div class="project_buttons">
+              <a
+                href="https://natours-site-project.netlify.app/"
+                class="projects-card__btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/BetulBuyukzengin/Natours"
+                class="projects-card__btn"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="projects-card section">
+          <img
+            class="projects-card__img lazy-img"
+            src="img/forkify-lazy.png"
+            data-src="img/forkify.png"
+            alt="forkify"
+          />
+          <div class="column">
+            <h2 class="projects-card__name">FORKIFY APPLICATION</h2>
+            <p class="projects__description">
+              You no longer have to worry about what meal to make with the
+              ingredients I have on hand. Thanks to Forkify App, you can access
+              the recipes you want.
+            </p>
+            <div class="project_buttons">
+              <a
+                href="https://forkify-betul.netlify.app/"
+                class="projects-card__btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/BetulBuyukzengin/Forkify-App"
+                class="projects-card__btn"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="projects-card section">
+          <img
+            class="projects-card__img lazy-img"
+            src="img/mapty-lazy.png"
+            data-src="img/mapty.png"
+            alt="mapty"
+          />
+          <div class="column">
+            <h2 class="projects-card__name">MAPTY APPLICATION</h2>
+            <p class="projects__description">
+              Imagine an app where you can record the data of your walking and
+              cycling activities, determine your location, and either
+              automatically locate it or manually select it on the map. With the
+              Mapty application, you can securely store your data on the app.
+            </p>
+            <div class="project_buttons">
+              <a
+                href="https://mapty-app-betul.netlify.app/"
+                class="projects-card__btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/BetulBuyukzengin/Mapty-App"
+                class="projects-card__btn"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="projects-card section">
+          <img
+            class="projects-card__img lazy-img"
+            src="img/guess-lazy.png"
+            data-src="img/guess.png"
+            alt="guess"
+          />
+          <div class="column">
+            <h2 class="projects-card__name">GUESS MY NUMBER</h2>
+            <p class="projects__description">
+              Discover the Number Guessing Game created with JavaScript for a
+              delightful time. (Between 1 and 20)
+            </p>
+            <div class="project_buttons">
+              <a
+                href="https://guess-my-numbergame.vercel.app/"
+                class="projects-card__btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/BetulBuyukzengin/GUESS_MY_NUMBER"
+                class="projects-card__btn"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="projects-card section">
+          <img
+            class="projects-card__img lazy-img"
+            src="img/dice-lazy.png"
+            data-src="img/dice.png"
+            alt="dice"
+          />
+          <div class="column">
+            <h2 class="projects-card__name">DICE GAME</h2>
+            <p class="projects__description">
+              It is a mini-game project created with JavaScript for two players
+              to enjoy a pleasant time together.
+            </p>
+            <div class="project_buttons">
+              <a
+                href="https://dice-game-betul.netlify.app/"
+                class="projects-card__btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/BetulBuyukzengin/DiceGame"
+                class="projects-card__btn"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="projects-card section">
+          <img
+            class="projects-card__img lazy-img"
+            src="img/bankist_app-lazy.png"
+            data-src="img/bankist_app.png"
+            alt="bankist"
+          />
+          <div class="column">
+            <h2 class="projects-card__name">BANKIST APP</h2>
+            <p class="projects__description">
+              Explore this mini banking application where you can track your
+              total income, expenses, current balance, and interest amount.
+              Additionally, you can make money transfers.
+            </p>
+            <div class="project_buttons">
+              <a
+                href="https://bankist-app-demo.netlify.app/"
+                class="projects-card__btn"
+                >Live</a
+              >
+              <a
+                href="https://github.com/BetulBuyukzengin/Bankist-App"
+                class="projects-card__btn"
+                >Github</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="contact">
+      <div class="footer_top">
+        <div class="footer_top--right">
+          <h3 class="footer-name">Betül Büyükzengin</h3>
+          <h4 class="footer-job">
+            A Frontend focused Web Developer building the Frontend of Websites.
+          </h4>
+        </div>
+        <div class="footer_top--left">
+          <h3 class="footer_socialHead">Social</h3>
+          <div class="communications">
+            <a href="mailto:betul.bzengin@gmail.com" class="communication">
+              <i class="fa-solid fa-envelope communication__icon"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/betul-buyukzengin/"
+              class="linkedin communication"
+            >
+              <i class="fa-brands fa-linkedin communication__icon"></i>
+            </a>
+            <a
+              href="https://github.com/BetulBuyukzengin"
+              class="github communication"
+            >
+              <i class="fa-brands fa-github communication__icon"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/bbuyukzengin/"
+              class="communication"
+            >
+              <i class="fa-brands fa-square-instagram communication__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        ©Copyright 2023 created by
+        <span class="footer__copyright_created">Betül Büyükzengin</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
