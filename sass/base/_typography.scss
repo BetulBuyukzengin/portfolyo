@@ -86,10 +86,10 @@
     width: 60%;
     border-left: solid 2px $color-green-light;
     padding-left: 1rem;
-    margin-left: 44rem;
+    margin-left: 4rem;
 
     @include respond(big-desktop) {
-      height: 42rem;
+      height: 50rem;
     }
     @include respond(tab-port) {
       width: 100%;
