@@ -82,11 +82,11 @@
     }
   }
   &-text {
+    height: 50rem;
     width: 60%;
     border-left: solid 2px $color-green-light;
-    height: 50rem;
     padding-left: 1rem;
-    margin-left: 4rem;
+    margin-left: 44rem;
 
     @include respond(big-desktop) {
       height: 42rem;
